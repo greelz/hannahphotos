@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { r2 } from "../../../lib/r2";
 
 async function getPhotos(slug: string) {
-  const prefix = `clients/${slug}/`;
+  const prefix = `production/${slug}/`;
 
   const result = await r2.send(
     new ListObjectsV2Command({
